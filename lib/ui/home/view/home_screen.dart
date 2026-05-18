@@ -215,20 +215,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: CustomColors.background,
-      bottomNavigationBar: CustomBottomBar(
-        selectedIndex: currentIndex,
-        onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
-      ),
+        bottomNavigationBar: CustomBottomBar(selectedIndex: 0),
       body: Stack(
         children: [
           Column(
             children: [
               SizedBox(height: 6.h),
               CustomAppBar(title: "Swift Bite"),
+
+              SizedBox(height: 2.h,),
 
               CustomTextField(
                 label: "",

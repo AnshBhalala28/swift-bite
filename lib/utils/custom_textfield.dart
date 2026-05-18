@@ -12,6 +12,7 @@ class CustomTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final String? Function(String?)? validator;
   final Function(String)? onChanged;
+  final bool showLabel;
 
   const CustomTextField({
     super.key,
@@ -23,6 +24,7 @@ class CustomTextField extends StatefulWidget {
     this.keyboardType = TextInputType.text,
     this.validator,
     this.onChanged,
+    this.showLabel = true,
   });
 
   @override
@@ -36,72 +38,79 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        // Label Text
-        Padding(
-          padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
-          child: Text(
-            widget.label,
-            style:  TextStyle(
-              fontSize: 16.sp,
-              fontFamily: CustomFonts.bold,
-              color: CustomColors.lableText,
-            ),
-          ),
-        ),
-        // Text Field Container
-        TextFormField(
-          controller: widget.controller,
-          onChanged: widget.onChanged,
-          obscureText: widget.isPassword ? _obscureText : false,
-          keyboardType: widget.keyboardType,
-          validator: widget.validator,
-          style: TextStyle(
-              fontSize: 15.sp,
-              color: CustomColors.lableText,
-              fontFamily: CustomFonts.reguler
-          ),
-          decoration: InputDecoration(
-            hintText: widget.hintText,
-
-            hintStyle: TextStyle(
-              fontSize: 15.sp,
-              color: CustomColors.subLableText,
-              fontFamily: CustomFonts.semiBold
-            ),
-            prefixIcon: Icon(widget.prefixIcon, color: CustomColors.orange),
-            suffixIcon: widget.isPassword
-                ? IconButton(
-              icon: Icon(
-                _obscureText ? Icons.visibility_off : Icons.visibility,
-                color: CustomColors.subLableText,
+        if (widget.showLabel && widget.label.isNotEmpty)
+          Padding(
+            padding: const EdgeInsets.only(left: 8, bottom: 6),
+            child: Text(
+              widget.label,
+              style: TextStyle(
+                fontSize: 16.sp,
+                fontFamily: CustomFonts.bold,
+                color: CustomColors.lableText,
               ),
-              onPressed: () {
-                setState(() {
-                  _obscureText = !_obscureText;
-                });
-              },
-            )
-                : null,
-            filled: true,
-            fillColor: Colors.white,
-            contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            ),
+          ),
 
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
-              borderSide: BorderSide.none,
+        SizedBox(
+          height: 5.8.h,
+          child: TextFormField(
+            controller: widget.controller,
+            onChanged: widget.onChanged,
+            obscureText: widget.isPassword ? _obscureText : false,
+            keyboardType: widget.keyboardType,
+            validator: widget.validator,
+            style: TextStyle(
+              fontSize: 14.sp,
+              color: CustomColors.lableText,
+              fontFamily: CustomFonts.reguler,
             ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: CustomColors.orange),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
-              borderSide:  BorderSide(color: CustomColors.orange, width: 1),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
-              borderSide: const BorderSide(color: CustomColors.orange, width: 1),
+            decoration: InputDecoration(
+              hintText: widget.hintText,
+              hintStyle: TextStyle(
+                fontSize: 13.sp,
+                color: CustomColors.subLableText,
+                fontFamily: CustomFonts.semiBold,
+              ),
+              prefixIcon: Icon(
+                widget.prefixIcon,
+                color: CustomColors.orange,
+                size: 18.sp,
+              ),
+              suffixIcon: widget.isPassword
+                  ? IconButton(
+                icon: Icon(
+                  _obscureText
+                      ? Icons.visibility_off
+                      : Icons.visibility,
+                  color: CustomColors.subLableText,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _obscureText = !_obscureText;
+                  });
+                },
+              )
+                  : null,
+              filled: true,
+              fillColor: Colors.white,
+              contentPadding: EdgeInsets.symmetric(
+                vertical: 0,
+                horizontal: 4.w,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide.none,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide(color: CustomColors.orange),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide(color: CustomColors.orange),
+              ),
             ),
           ),
         ),

@@ -1,17 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:swiftbite/ui/food_items/view/all_food_items_screen.dart';
+import 'package:swiftbite/ui/home/view/home_screen.dart';
 import 'package:swiftbite/utils/cutomColor.dart';
 import 'package:swiftbite/utils/import_string.dart';
 
+// IMPORT YOUR SCREENS
+
+
 class CustomBottomBar extends StatelessWidget {
   final int selectedIndex;
-  final Function(int) onTap;
 
   const CustomBottomBar({
     super.key,
     required this.selectedIndex,
-    required this.onTap,
   });
+
+  void _navigateToScreen(BuildContext context, int index) {
+    if (selectedIndex == index) return;
+
+    Widget screen;
+
+    switch (index) {
+      case 0:
+        screen =  HomeScreen();
+        break;
+      case 1:
+        screen =  AllFoodItemsScreen();
+        break;
+      // case 2:
+      //   screen = const CartScreen();
+      //   break;
+      // case 3:
+      //   screen = const ProfileScreen();
+      //   break;
+      default:
+        screen = const HomeScreen();
+    }
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (_) => screen),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,23 +91,22 @@ class CustomBottomBar extends StatelessWidget {
 
           return Expanded(
             child: GestureDetector(
-              onTap: () => onTap(index),
+              onTap: () => _navigateToScreen(context, index),
               behavior: HitTestBehavior.opaque,
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOutQuint,
                 margin: EdgeInsets.symmetric(horizontal: 1.5.w),
                 padding: EdgeInsets.symmetric(vertical: 0.8.h),
                 decoration: BoxDecoration(
-                  color: isSelected ? CustomColors.orange : Colors.transparent,
+                  color: isSelected
+                      ? CustomColors.orange
+                      : Colors.transparent,
                   borderRadius: BorderRadius.circular(4.w),
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // આઇકોન
                     Icon(
                       isSelected ? item.activeIcon : item.icon,
                       size: 20.sp,
