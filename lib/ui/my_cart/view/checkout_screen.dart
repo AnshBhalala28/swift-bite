@@ -45,11 +45,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Scaffold(
       backgroundColor: CustomColors.background,
       bottomNavigationBar: const CustomBottomBar(selectedIndex: 3),
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 4.w),
-          child: Column(
+      body: Stack(
+        children: [
+          Column(
             children: [
+              SizedBox(height: 6.h,),
               CustomAppBar(
                 title: "CheckOut",
                 isLocationVisible: false,
@@ -254,8 +254,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 ),
               ),
             ],
-          ),
-        ),
+          ).paddingOnly(left: 3.w,right: 3.w),
+        ],
       ),
     );
   }
