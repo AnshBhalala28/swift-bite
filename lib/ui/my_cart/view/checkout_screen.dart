@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:swiftbite/controller/cart_controller.dart';
-import 'package:swiftbite/payment_service/stripe_service.dart';
 import 'package:swiftbite/utils/custom_bottombar.dart';
 import 'package:swiftbite/utils/custom_button.dart';
 import 'package:swiftbite/utils/custom_textfield.dart';
