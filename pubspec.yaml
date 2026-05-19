@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   get:
   sizer:
+  cached_network_image:
+  flutter_stripe:
+  http:
 
 dev_dependencies:
   flutter_test:
@@ -60,8 +63,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -78,19 +81,19 @@ flutter:
   fonts:
      - family: nunitoBold
        fonts:
-         - assets: fonts/Nunito-Bold.ttf
+         - asset: assets/fonts/Nunito-Bold.ttf
 
      - family: nunitoMedium
        fonts:
-         - assets: fonts/Nunito-Medium.ttf
+         - asset: assets/fonts/Nunito-Medium.ttf
 
      - family: nunitoRegular
        fonts:
-         - assets: fonts/Nunito-Regular.ttf
+         - asset: assets/fonts/Nunito-Regular.ttf
 
      - family: nunitoSemiBold
        fonts:
-         - assets: fonts/Nunito-SemiBold.ttf
+         - asset: assets/fonts/Nunito-SemiBold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

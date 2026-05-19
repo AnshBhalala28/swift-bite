@@ -110,7 +110,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         return null;
                       },
                     ),
-                    SizedBox(height: 2.5.h),
+
+                    SizedBox(height: 2.h,),
+
                     CustomTextField(
                       label: "Password",
                       hintText: "Enter Your Password",

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:swiftbite/controller/cart_controller.dart';
 import 'package:swiftbite/ui/welcome/view/welcome_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Get.put(CartController());
   runApp(
     Sizer(
       builder: (context, orientation, deviceType) {

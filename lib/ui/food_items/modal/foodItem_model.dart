@@ -7,6 +7,10 @@ class FoodItemModel {
   final String image;
   final bool isFavourite;
 
+  final String description;
+  final List<String> ingredients;
+  final int calories;
+
   FoodItemModel({
     required this.name,
     required this.category,
@@ -15,5 +19,8 @@ class FoodItemModel {
     required this.rating,
     required this.image,
     this.isFavourite = false,
+    required this.description,
+    required this.ingredients,
+    required this.calories,
   });
 }

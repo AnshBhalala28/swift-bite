@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:swiftbite/ui/food_items/modal/foodItem_model.dart';
+import 'package:swiftbite/ui/food_items/view/food_details_screen.dart';
 import 'package:swiftbite/utils/custom_bottombar.dart';
 import 'package:swiftbite/utils/custom_textfield.dart';
 import 'package:swiftbite/utils/custom_titlebar.dart';
@@ -80,7 +81,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 19.50,
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1547592180-85f173990554",
+      description:
+      "Fresh salmon poke bowl served with avocado, cucumber, edamame, sesame seeds, and premium Japanese rice.",
+      ingredients: [
+        "Salmon",
+        "Avocado",
+        "Rice",
+        "Edamame",
+        "Sesame",
+      ],
+      calories: 520,
     ),
+
     FoodItemModel(
       name: "Truffle Mushroom Pizza",
       category: "Italian • Gourmet",
@@ -88,7 +100,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 24.00,
       rating: 4.7,
       image: "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+      description:
+      "Wood-fired gourmet pizza topped with truffle oil, mozzarella cheese, mushrooms, and fresh herbs.",
+      ingredients: [
+        "Cheese",
+        "Mushroom",
+        "Truffle",
+        "Herbs",
+        "Dough",
+      ],
+      calories: 680,
     ),
+
     FoodItemModel(
       name: "Honey Glazed Wings",
       category: "Fast Food • Spicy",
@@ -96,7 +119,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 12.99,
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1562967916-eb82221dfb92",
+      description:
+      "Crispy chicken wings coated in sweet honey glaze and spicy seasoning.",
+      ingredients: [
+        "Chicken",
+        "Honey",
+        "Spices",
+        "Garlic",
+        "Butter",
+      ],
+      calories: 590,
     ),
+
     FoodItemModel(
       name: "Classic Cheeseburger",
       category: "Fast Food • Burger",
@@ -104,7 +138,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 14.50,
       rating: 4.6,
       image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      description:
+      "Juicy beef burger with cheddar cheese, lettuce, tomato, onion, and signature sauce.",
+      ingredients: [
+        "Beef",
+        "Cheese",
+        "Lettuce",
+        "Tomato",
+        "Sauce",
+      ],
+      calories: 640,
     ),
+
     FoodItemModel(
       name: "Margherita Pizza",
       category: "Italian • Pizza",
@@ -112,7 +157,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 18.99,
       rating: 4.5,
       image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143",
+      description:
+      "Classic Italian Margherita pizza with mozzarella, basil, and rich tomato sauce.",
+      ingredients: [
+        "Cheese",
+        "Basil",
+        "Tomato",
+        "Dough",
+        "Olive Oil",
+      ],
+      calories: 610,
     ),
+
     FoodItemModel(
       name: "Salmon Sushi Roll",
       category: "Japanese • Sushi",
@@ -120,7 +176,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 21.00,
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
+      description:
+      "Premium sushi rolls with fresh salmon, cucumber, avocado, and sushi rice.",
+      ingredients: [
+        "Salmon",
+        "Rice",
+        "Avocado",
+        "Seaweed",
+        "Cucumber",
+      ],
+      calories: 430,
     ),
+
     FoodItemModel(
       name: "Creamy Alfredo Pasta",
       category: "Italian • Pasta",
@@ -128,7 +195,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 16.75,
       rating: 4.7,
       image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9",
+      description:
+      "Rich creamy Alfredo pasta topped with parmesan cheese and herbs.",
+      ingredients: [
+        "Pasta",
+        "Cream",
+        "Parmesan",
+        "Garlic",
+        "Butter",
+      ],
+      calories: 710,
     ),
+
     FoodItemModel(
       name: "Grilled Chicken Salad",
       category: "Healthy • Salad",
@@ -136,7 +214,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 13.99,
       rating: 4.4,
       image: "https://images.unsplash.com/photo-1546793665-c74683f339c1",
+      description:
+      "Healthy grilled chicken salad with lettuce, cherry tomatoes, cucumber, and vinaigrette.",
+      ingredients: [
+        "Chicken",
+        "Lettuce",
+        "Tomato",
+        "Cucumber",
+        "Sauce",
+      ],
+      calories: 390,
     ),
+
     FoodItemModel(
       name: "Club Sandwich",
       category: "Snacks • Sandwich",
@@ -144,7 +233,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 11.50,
       rating: 4.3,
       image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af",
+      description:
+      "Triple-layer sandwich with chicken, lettuce, cheese, and mayo.",
+      ingredients: [
+        "Bread",
+        "Chicken",
+        "Cheese",
+        "Lettuce",
+        "Mayo",
+      ],
+      calories: 470,
     ),
+
     FoodItemModel(
       name: "Chocolate Lava Cake",
       category: "Dessert • Sweet",
@@ -152,7 +252,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 9.99,
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+      description:
+      "Warm chocolate lava cake with rich molten center and soft sponge texture.",
+      ingredients: [
+        "Chocolate",
+        "Butter",
+        "Sugar",
+        "Egg",
+        "Flour",
+      ],
+      calories: 450,
     ),
+
     FoodItemModel(
       name: "Cold Coffee Frappe",
       category: "Drinks • Coffee",
@@ -160,7 +271,18 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 7.99,
       rating: 4.5,
       image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+      description:
+      "Refreshing cold coffee frappe blended with milk, ice, and chocolate syrup.",
+      ingredients: [
+        "Coffee",
+        "Milk",
+        "Ice",
+        "Sugar",
+        "Chocolate",
+      ],
+      calories: 280,
     ),
+
     FoodItemModel(
       name: "Spicy Mexican Tacos",
       category: "Mexican • Tacos",
@@ -168,6 +290,16 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
       price: 13.49,
       rating: 4.6,
       image: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85",
+      description:
+      "Spicy Mexican tacos filled with seasoned meat, lettuce, cheese, and salsa.",
+      ingredients: [
+        "Tortilla",
+        "Chicken",
+        "Cheese",
+        "Lettuce",
+        "Salsa",
+      ],
+      calories: 540,
     ),
   ];
 
@@ -485,164 +617,171 @@ class _AllFoodItemsScreenState extends State<AllFoodItemsScreen> {
 
                           return Padding(
                             padding: EdgeInsets.only(bottom: 2.h),
-                            child: Container(
-                              padding: EdgeInsets.all(3.w),
-                              decoration: BoxDecoration(
-                                color: CustomColors.whiteText,
-                                borderRadius: BorderRadius.circular(5.w),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: CustomColors.lableText.withOpacity(0.04),
-                                    blurRadius: 12,
-                                    offset: const Offset(0, 4),
-                                  ),
-                                ],
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(4.w),
-                                    child: CachedNetworkImage(
-                                      imageUrl: item.image,
-                                      height: 11.h,
-                                      width: 25.w,
-                                      fit: BoxFit.cover,
-                                      placeholder: (_, __) => Container(
-                                        color: Colors.grey.shade100,
-                                        child: Center(
-                                          child: CircularProgressIndicator(
-                                            color: CustomColors.orange,
-                                            strokeWidth: 2,
+                            child: GestureDetector(
+                              onTap: (){
+                                Get.to(
+                                  FoodDetailsScreen(foodItem: item),
+                                );
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(3.w),
+                                decoration: BoxDecoration(
+                                  color: CustomColors.whiteText,
+                                  borderRadius: BorderRadius.circular(5.w),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: CustomColors.lableText.withOpacity(0.04),
+                                      blurRadius: 12,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(4.w),
+                                      child: CachedNetworkImage(
+                                        imageUrl: item.image,
+                                        height: 11.h,
+                                        width: 25.w,
+                                        fit: BoxFit.cover,
+                                        placeholder: (_, __) => Container(
+                                          color: Colors.grey.shade100,
+                                          child: Center(
+                                            child: CircularProgressIndicator(
+                                              color: CustomColors.orange,
+                                              strokeWidth: 2,
+                                            ),
+                                          ),
+                                        ),
+                                        errorWidget: (_, __, ___) => Container(
+                                          color: Colors.grey.shade100,
+                                          child: Icon(
+                                            Icons.broken_image_rounded,
+                                            color: Colors.grey.shade400,
                                           ),
                                         ),
                                       ),
-                                      errorWidget: (_, __, ___) => Container(
-                                        color: Colors.grey.shade100,
-                                        child: Icon(
-                                          Icons.broken_image_rounded,
-                                          color: Colors.grey.shade400,
-                                        ),
-                                      ),
                                     ),
-                                  ),
 
-                                  SizedBox(width: 4.w),
+                                    SizedBox(width: 4.w),
 
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Expanded(
-                                              child: Text(
-                                                item.name,
-                                                maxLines: 1,
-                                                overflow: TextOverflow.ellipsis,
-                                                style: TextStyle(
-                                                  fontSize: 15.sp,
-                                                  fontFamily: CustomFonts.bold,
-                                                  color: CustomColors.lableText,
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Expanded(
+                                                child: Text(
+                                                  item.name,
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
+                                                  style: TextStyle(
+                                                    fontSize: 15.sp,
+                                                    fontFamily: CustomFonts.bold,
+                                                    color: CustomColors.lableText,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
 
-                                            SizedBox(width: 2.w),
+                                              SizedBox(width: 2.w),
 
-                                            GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  isFavorite = !isFavorite;
-                                                });
-                                              },
-                                              child: AnimatedSwitcher(
-                                                duration: const Duration(milliseconds: 200),
-                                                transitionBuilder:
-                                                    (Widget child, Animation<double> animation) {
-                                                  return ScaleTransition(
-                                                    scale: animation,
-                                                    child: child,
-                                                  );
+                                              GestureDetector(
+                                                onTap: () {
+                                                  setState(() {
+                                                    isFavorite = !isFavorite;
+                                                  });
                                                 },
-                                                child: Icon(
-                                                  isFavorite
-                                                      ? Icons.favorite_rounded
-                                                      : Icons.favorite_border_rounded,
-                                                  key: ValueKey<bool>(isFavorite),
-                                                  color: isFavorite
-                                                      ? CustomColors.orange
-                                                      : CustomColors.subLableText.withOpacity(0.6),
-                                                  size: 17.sp,
+                                                child: AnimatedSwitcher(
+                                                  duration: const Duration(milliseconds: 200),
+                                                  transitionBuilder:
+                                                      (Widget child, Animation<double> animation) {
+                                                    return ScaleTransition(
+                                                      scale: animation,
+                                                      child: child,
+                                                    );
+                                                  },
+                                                  child: Icon(
+                                                    isFavorite
+                                                        ? Icons.favorite_rounded
+                                                        : Icons.favorite_border_rounded,
+                                                    key: ValueKey<bool>(isFavorite),
+                                                    color: isFavorite
+                                                        ? CustomColors.orange
+                                                        : CustomColors.subLableText.withOpacity(0.6),
+                                                    size: 17.sp,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-
-                                        SizedBox(height: 0.5.h),
-
-                                        Text(
-                                          "${item.category} • ${item.timing}",
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                            fontSize: 14.sp,
-                                            fontFamily: CustomFonts.reguler,
-                                            color: CustomColors.subLableText.withOpacity(0.8),
+                                            ],
                                           ),
-                                        ),
 
-                                        SizedBox(height: 1.5.h),
+                                          SizedBox(height: 0.5.h),
 
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              "\$${item.price.toStringAsFixed(2)}",
-                                              style: TextStyle(
-                                                fontSize: 14.5.sp,
-                                                fontFamily: CustomFonts.bold,
-                                                color: CustomColors.orange,
-                                              ),
+                                          Text(
+                                            "${item.category} • ${item.timing}",
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                              fontSize: 14.sp,
+                                              fontFamily: CustomFonts.reguler,
+                                              color: CustomColors.subLableText.withOpacity(0.8),
                                             ),
+                                          ),
 
-                                            Container(
-                                              padding: EdgeInsets.symmetric(
-                                                horizontal: 2.5.w,
-                                                vertical: 0.4.h,
+                                          SizedBox(height: 1.5.h),
+
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                "\$${item.price.toStringAsFixed(2)}",
+                                                style: TextStyle(
+                                                  fontSize: 14.5.sp,
+                                                  fontFamily: CustomFonts.bold,
+                                                  color: CustomColors.orange,
+                                                ),
                                               ),
-                                              decoration: BoxDecoration(
-                                                color: CustomColors.orange.withOpacity(0.08),
-                                                borderRadius: BorderRadius.circular(3.w),
-                                              ),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  Icon(
-                                                    Icons.star_rounded,
-                                                    color: CustomColors.orange,
-                                                    size: 18.sp,
-                                                  ),
-                                                  SizedBox(width: 0.8.w),
-                                                  Text(
-                                                    item.rating.toString(),
-                                                    style: TextStyle(
-                                                      fontSize: 13.sp,
-                                                      fontFamily: CustomFonts.semiBold,
-                                                      color: CustomColors.lableText,
+
+                                              Container(
+                                                padding: EdgeInsets.symmetric(
+                                                  horizontal: 2.5.w,
+                                                  vertical: 0.4.h,
+                                                ),
+                                                decoration: BoxDecoration(
+                                                  color: CustomColors.orange.withOpacity(0.08),
+                                                  borderRadius: BorderRadius.circular(3.w),
+                                                ),
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    Icon(
+                                                      Icons.star_rounded,
+                                                      color: CustomColors.orange,
+                                                      size: 18.sp,
                                                     ),
-                                                  ),
-                                                ],
+                                                    SizedBox(width: 0.8.w),
+                                                    Text(
+                                                      item.rating.toString(),
+                                                      style: TextStyle(
+                                                        fontSize: 13.sp,
+                                                        fontFamily: CustomFonts.semiBold,
+                                                        color: CustomColors.lableText,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           );
